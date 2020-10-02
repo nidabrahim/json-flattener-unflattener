@@ -5,8 +5,44 @@
         // background-color: #2980b9;
         color: #fff;
     }
+    .input-container,
+    .output-container{
+        background-color: #444a50;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 10px;
+        label{
+            font-size: 16px;
+        }
+        pre{
+            height: 807px;
+        }
+    }
+    .output-container{
+        .fa-clone{
+            color: #fff;
+        }
+    }
     .action{
         text-align: center;
+        background-color: #444a50;
+        border-radius: 8px;
+        height: 280px;
+        padding: 30px;
+        .btn{
+            background-color: #2980b9;
+ 
+        }
+        .mode{
+            font-size: 16px;
+        }
+        .btn-container{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 150px;
+            margin-top: 5px;
+        }
     }
 }
 .copy-btn{
@@ -14,4 +50,8 @@
     cursor: pointer;
     font-size: 18px;
     color: #292929;
+}
+
+::ng-deep .mat-button-toggle-appearance-standard .mat-button-toggle-label-content{
+    border: 1px solid #ffffff24;
 }

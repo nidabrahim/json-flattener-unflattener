@@ -7,28 +7,30 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-md-5">
-            <div class="form-group">
-                <label>Input:</label>
-                <textarea class="form-control" name="" id="input" cols="30" rows="20" formControlName="json_content"></textarea>
+            <div class="form-group input-container">
+                <label>Input :</label>
+                <textarea class="form-control" name="" id="input" cols="30" rows="40" formControlName="json_content"></textarea>
             </div>
         </div>
-
         <div class="col-md-2 action">
-          <div>
-            <label>Mode:</label>
-            <mat-button-toggle-group name="mode" formControlName="mode" aria-label="Mode">
-              <mat-button-toggle value="flatten">Flatten</mat-button-toggle>
-              <mat-button-toggle value="unflatten">Unflatten</mat-button-toggle>
+          <div class="mode">
+            <p>Mode {{form.controls.mode.value}}</p>
+            <mat-button-toggle-group name="mode" formControlName="mode" aria-label="Mode" [value]="selectedValue">
+              <mat-button-toggle value="Flatten">Flatten</mat-button-toggle>
+              <mat-button-toggle value="Unflatten">Unflatten</mat-button-toggle>
             </mat-button-toggle-group>
           </div>
-
-          <button id="process" class="btn btn-primary" [disabled]="!form.valid">Process</button>
+          <div class="btn-container">
+            <button id="process" class="btn btn-primary" [disabled]="!form.valid">Process</button>
+          </div>
         </div>
 
         <div class="col-md-5">
-          <label>Formatted:</label>
-          <span id="copy" class="copy-btn" (click)="onCopy()"><i class="fa fa-clone"></i></span>
-          <pre><code id="formatted">{{formatted}}</code></pre>
+          <div class="output-container">
+            <label>Formatted :</label>
+            <span id="copy" class="copy-btn" (click)="onCopy()"><i class="fa fa-clone"></i></span>
+            <pre><code id="formatted">{{formatted}}</code></pre>
+          </div>
         </div>
       </div>
     </form>

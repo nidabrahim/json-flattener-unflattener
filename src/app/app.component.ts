@@ -8,6 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'jsonFlattenerUnflattener';
+  selectedValue = 'Unflatten';
   formatted: any;
 
   form = new FormGroup({

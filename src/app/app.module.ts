@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { HeaderComponent } from './header/header.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,12 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatButtonModule
+  ],
+  exports: [
+    MatButtonToggleModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
