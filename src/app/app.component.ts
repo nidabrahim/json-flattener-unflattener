@@ -60,11 +60,11 @@ export class AppComponent {
   onSubmit(){
     var result = '';
     switch(this.form.controls.mode.value){
-      case 'flatten': 
+      case 'Flatten': 
         result = JSON.stringify(this.flatten(JSON.parse(this.form.controls.json_content.value)), null, "\t")
         break;
 
-      case 'unflatten': 
+      case 'Unflatten': 
         result = JSON.stringify(this.unflatten(JSON.parse(this.form.controls.json_content.value)), null, "\t")
         break;
     }
